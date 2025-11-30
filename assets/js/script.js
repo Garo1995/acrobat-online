@@ -76,23 +76,3 @@ $('.menu-scroll a').click(function() {
 
 
 
-
-
-
-let swiper = new Swiper(".banner-slider", {
-    loop: true,
-    grabCursor: true,
-    centeredSlides: true,
-    slidesPerView: "auto",
-
-    effect: "coverflow",
-    coverflowEffect: {
-        rotate: 6,
-        stretch: -6,
-        depth: -25,
-        modifier: 2.4,
-        slideShadows: false,
-    },
-
-    speed: 800,
-});

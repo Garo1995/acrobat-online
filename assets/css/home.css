@@ -119,7 +119,13 @@ p{
     border-radius: 50%;
 
 }
-
+.acrobat-icon:first-child {
+    width: 69px;
+    height: 69px;
+}
+.acrobat-icon:last-child {
+    width: 126px;
+}
 .banner-cnt:before{
     content: "";
     position: absolute;
@@ -388,12 +394,17 @@ p{
         height: auto;
         gap: 20px;
     }
+    .banner-box:nth-child(1) .banner-photo{
+        padding: 25px 25px 5px;
+    }
+    .banner-box:nth-child(1) .banner-photo img{
+        width: 100%;
+    }
     .scenarios-box .banner-name {
         padding: 47px 24px 3px 24px;
     }
     .scenarios-box {
         border-radius: 25px;
-        height: 293px;
     }
     .conven-loading {
         width: 127px;
@@ -405,6 +416,11 @@ p{
     .conven-loading span {
         font-size: 15px;
         line-height: 107%;
+    }
+}
+@media (max-width: 410px){
+    .scenarios-box {
+        height: auto;
     }
 }
 
@@ -977,9 +993,21 @@ p{
     }
     .convenient-fon{
         background-image: url("../img/fon-linner-mob.png");
+        min-height: 341px;
+        gap: 23px;
+        overflow: hidden;
+        max-width: 364px;
+        margin: 0 auto;
     }
 
 }
+@media (max-width: 410px){
+    .convenient-fon{
+        min-height: 300px;
+        max-width: 321px;
+    }
+}
+
 
 /*============-convenient-style-end-==========*/
 
