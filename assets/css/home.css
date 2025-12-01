@@ -173,6 +173,12 @@ p{
     flex-direction: column;
     justify-content: space-between;
 }
+.banner-box:nth-child(1) .banner-photo{
+    padding: 0 17px 0;
+}
+.banner-group{
+    display: none;
+}
 .banner-name{
     padding: 0 25px 25px;
 }
@@ -219,6 +225,7 @@ p{
     bottom: 9px;
     display: flex;
     align-items: center;
+    justify-content: center;
 }
 .conven-loading span{
     color: rgba(0, 0, 0, 1);
@@ -395,7 +402,7 @@ p{
         gap: 20px;
     }
     .banner-box:nth-child(1) .banner-photo{
-        padding: 25px 25px 5px;
+        padding: 0 25px 5px;
     }
     .banner-box:nth-child(1) .banner-photo img{
         width: 100%;
@@ -407,7 +414,6 @@ p{
         border-radius: 25px;
     }
     .conven-loading {
-        width: 127px;
         height: 104px;
         border-radius: 25px;
         padding: 9px;
@@ -417,10 +423,42 @@ p{
         font-size: 15px;
         line-height: 107%;
     }
+    .banner-photo{
+        position: relative;
+    }
+
+    .banner-group{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        position: absolute;
+        left: 50%;
+        top: 50%;
+        transform: translate(-50%, -50%);
+        width: 82px;
+        height: 82px;
+        border-radius: 15px;
+        padding: 15px;
+        z-index: 2;
+        background: #ffffff;
+    }
+    .icon-group{
+        content: url("../img/group.svg");
+    }
 }
 @media (max-width: 410px){
     .scenarios-box {
         height: auto;
+    }
+    .conven-loading {
+        height: 96px;
+        width: 130px;
+    }
+
+}
+@media (max-width: 359px){
+    .conven-loading {
+        width: 120px;
     }
 }
 
@@ -643,7 +681,7 @@ p{
     height: 161px;
 }
 
-.online-photo-mob{
+.online-photo{
     display: none;
 }
 @media (max-width: 1399px){
@@ -699,11 +737,9 @@ p{
     .online-pdf-flex{
         display: none;
     }
-    .online-photo-mob{
+    .online-photo{
         display: flex;
-        flex-direction: column;
-        gap: 20px;
-        margin-top: 30px;
+
     }
     .online-photo{
         width: 100%;
