@@ -176,8 +176,28 @@ p{
 .banner-box:nth-child(1) .banner-photo{
     padding: 0 17px 0;
 }
+
+.banner-photo{
+    position: relative;
+}
+
 .banner-group{
-    display: none;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    width: 82px;
+    height: 82px;
+    border-radius: 15px;
+    padding: 15px;
+    z-index: 2;
+    background: #ffffff;
+}
+.icon-group{
+    content: url("../img/group.svg");
 }
 .banner-name{
     padding: 0 25px 25px;
@@ -423,28 +443,7 @@ p{
         font-size: 15px;
         line-height: 107%;
     }
-    .banner-photo{
-        position: relative;
-    }
 
-    .banner-group{
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        position: absolute;
-        left: 50%;
-        top: 50%;
-        transform: translate(-50%, -50%);
-        width: 82px;
-        height: 82px;
-        border-radius: 15px;
-        padding: 15px;
-        z-index: 2;
-        background: #ffffff;
-    }
-    .icon-group{
-        content: url("../img/group.svg");
-    }
 }
 @media (max-width: 410px){
     .scenarios-box {
@@ -739,7 +738,6 @@ p{
     }
     .online-photo{
         display: flex;
-
     }
     .online-photo{
         width: 100%;
